@@ -14,6 +14,8 @@ terraform-assignment/
 ├── variables.tf          # Input variable declarations
 ├── terraform.tfvars      # Input variable values
 ├── outputs.tf            # Output values after apply
+├── .gitignore            # Ignored files for Git
+├── README.md             # Project overview and usage instructions
 └── terraform-assignment.md
 ```
 
