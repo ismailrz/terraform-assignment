@@ -1,19 +1,24 @@
-output "ec2_instance_id" {
-  description = "ID of the EC2 instance"
-  value       = aws_instance.terraform_assignment.id
+output "vpc_id" {
+  value = aws_vpc.ostad_dev.id
 }
 
-output "ec2_public_ip" {
-  description = "Public IP of the EC2 instance"
-  value       = aws_instance.terraform_assignment.public_ip
+output "public_subnet_id" {
+  value = aws_subnet.public_subnet.id
 }
 
-output "s3_bucket_name" {
-  description = "Name of the S3 bucket"
-  value       = aws_s3_bucket.terraform_assignment.bucket
+output "private_subnet_id" {
+  value = aws_subnet.private_subnet.id
 }
 
-output "s3_bucket_arn" {
-  description = "ARN of the S3 bucket"
-  value       = aws_s3_bucket.terraform_assignment.arn
+output "public_security_group" {
+  value = aws_security_group.public_sg.id
+}
+
+output "private_security_group" {
+  value = aws_security_group.private_sg.id
+}
+
+
+output "nat_gateway" {
+  value = aws_nat_gateway.nat.id
 }
